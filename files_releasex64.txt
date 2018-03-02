@@ -1,0 +1,1 @@
+Translator\x64\Release\*.dll

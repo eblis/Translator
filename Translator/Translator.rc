@@ -1,0 +1,237 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_OPT_TRANSLATOR DIALOGEX 0, 0, 275, 244
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CONTROL | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION " "
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Translator options",IDC_STATIC,4,4,267,236
+    GROUPBOX        "  ",IDC_TRANSLATIONS_GROUPBOX,8,129,258,108
+    GROUPBOX        "General settings",IDC_STATIC,8,12,258,49
+    LTEXT           "Number of strings to keep in memory before writing to disk:",IDC_STATIC,11,73,209,8
+    EDITTEXT        IDC_FLUSHAMOUNT,221,69,40,14,ES_AUTOHSCROLL
+    LTEXT           "Log the following strings:",IDC_STATIC,11,113,95,8
+    COMBOBOX        IDC_FILTER_MODE,107,112,154,60,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "This value is used as a minimum, the actual number might be bigger.\nWarning: setting a big number will increase memory requirements considerably.",IDC_STATIC,13,83,248,28
+    CONTROL         "Custom code page",IDC_OVERRIDE_CODEPAGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,32,138,10
+    EDITTEXT        IDC_CUSTOM_CODEPAGE,151,32,40,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Flush to disk now",IDC_FLUSH,151,18,110,14
+    CONTROL         "Flush on exit",IDC_FLUSHONEXIT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,22,138,10
+    LTEXT           "",IDC_STATISTICS,11,49,250,8
+    CONTROL         "Translation mode",IDC_TRANSLATION_MODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,129,68,9
+    LTEXT           "Warning: Translation mode will increase memory requirements further.\nYou should only enable this mode if you plan to write Miranda translations.\nYou need to restart Miranda for the setting to take effect.",IDC_STATIC,13,205,248,28
+    PUSHBUTTON      "Translations window",IDC_TRANSLATIONS,151,138,110,14
+    GROUPBOX        "Normal mode",IDC_NORMAL_GROUPBOX,8,61,258,68
+    CONTROL         "Enable dynamic translation",IDC_DYNAMIC_TRANSLATION,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,154,218,10
+    CONTROL         "Ignore double translations",IDC_IGNORE_DOUBLE_TRANSLATIONS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,164,219,10
+    CONTROL         "Ignore untranslated strings when building language pack",IDC_LANGUAGEPACK_IGNOREUNTRANSLATED,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,173,250,10
+    CONTROL         "Filter entries automatically after",IDC_AUTOMATIC_FILTER,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,187,136,10
+    EDITTEXT        IDC_FILTER_TIMEOUT,151,186,40,14,ES_AUTOHSCROLL
+    LTEXT           "milliseconds",IDC_STATIC,194,189,67,8
+END
+
+IDD_TRANSLATIONS DIALOGEX 0, 0, 394, 298
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Manage translations"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_TRANSLATIONS,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,4,20,386,175
+    EDITTEXT        IDC_ENGLISH,4,207,386,30,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | NOT WS_TABSTOP
+    LTEXT           "English text:",IDC_LABEL_ENGLISH,4,198,386,8
+    LTEXT           "Translation:",IDC_LABEL_TRANSLATION,4,240,386,8
+    CONTROL         "Autosave translation",IDC_AUTOSAVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,4,283,180,10
+    PUSHBUTTON      "Create language pack",IDC_EXPORT,185,280,96,14
+    PUSHBUTTON      "Save",IDC_SAVE,288,280,50,14
+    PUSHBUTTON      "Reset",IDC_RESET,340,280,50,14
+    CONTROL         "",IDC_TRANSLATION,"RichEdit20A",ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_TABSTOP,4,249,386,28,WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_FILTER_EDIT,120,4,216,14,ES_AUTOHSCROLL
+    LTEXT           "Filter translations:",IDC_STATIC,4,7,114,8
+    PUSHBUTTON      "Filter",IDC_FILTER,340,4,50,14
+END
+
+IDD_EXPORT DIALOGEX 0, 0, 411, 203
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Export language pack"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Output location:",IDC_STATIC,4,10,68,8
+    EDITTEXT        IDC_OUTPUT,74,6,304,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,382,6,25,14
+    LTEXT           "Language:",IDC_STATIC,4,27,68,8
+    EDITTEXT        IDC_LANGUAGE,74,23,156,14,ES_AUTOHSCROLL
+    LTEXT           "Locale:",IDC_STATIC,4,44,68,8
+    EDITTEXT        IDC_LOCALE,74,40,156,14,ES_AUTOHSCROLL
+    LTEXT           "Author(s):",IDC_STATIC,4,61,68,8
+    EDITTEXT        IDC_AUTHORS,74,57,156,14,ES_AUTOHSCROLL
+    LTEXT           "Email(s):",IDC_STATIC,4,78,68,8
+    EDITTEXT        IDC_EMAILS,74,74,156,14,ES_AUTOHSCROLL
+    LTEXT           "Plugins included:",IDC_STATIC,4,95,68,8
+    EDITTEXT        IDC_PLUGINSINCLUDED,74,91,156,72,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "Updater FLID:",IDC_STATIC,4,171,68,8
+    EDITTEXT        IDC_FLID,74,167,156,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_COMMENTS,235,37,172,144,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "Additional comments",IDC_STATIC,235,27,87,8
+    PUSHBUTTON      "&Export",IDC_EXPORT,152,185,50,14
+    PUSHBUTTON      "&Cancel",IDC_CANCEL,207,185,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_OPT_TRANSLATOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 271
+        VERTGUIDE, 8
+        VERTGUIDE, 11
+        VERTGUIDE, 13
+        VERTGUIDE, 149
+        VERTGUIDE, 151
+        VERTGUIDE, 261
+        VERTGUIDE, 266
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 240
+        HORZGUIDE, 12
+        HORZGUIDE, 32
+        HORZGUIDE, 42
+        HORZGUIDE, 45
+        HORZGUIDE, 57
+        HORZGUIDE, 61
+        HORZGUIDE, 81
+        HORZGUIDE, 83
+        HORZGUIDE, 121
+        HORZGUIDE, 124
+        HORZGUIDE, 129
+        HORZGUIDE, 138
+        HORZGUIDE, 152
+        HORZGUIDE, 164
+        HORZGUIDE, 197
+        HORZGUIDE, 233
+        HORZGUIDE, 237
+    END
+
+    IDD_TRANSLATIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 390
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 294
+        HORZGUIDE, 7
+        HORZGUIDE, 293
+    END
+
+    IDD_EXPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 407
+        VERTGUIDE, 72
+        VERTGUIDE, 74
+        VERTGUIDE, 230
+        VERTGUIDE, 235
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 199
+        HORZGUIDE, 18
+        HORZGUIDE, 20
+        HORZGUIDE, 35
+        HORZGUIDE, 37
+        HORZGUIDE, 52
+        HORZGUIDE, 54
+        HORZGUIDE, 69
+        HORZGUIDE, 71
+        HORZGUIDE, 86
+        HORZGUIDE, 88
+        HORZGUIDE, 91
+        HORZGUIDE, 103
+        HORZGUIDE, 163
+        HORZGUIDE, 179
+        HORZGUIDE, 181
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_TRANSLATOR          ICON                    "icons\\translator.ico"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
